@@ -5,14 +5,14 @@ const LoginForm = () => {
     <>
       <Form>
         <FormInner>
-          <h2>타이틀</h2>
+          <h2>로그인</h2>
           <p>
             <input type="text" placeholder="아이디를 입력해주세요" />
           </p>
           <p>
             <input type="password" placeholder="비밀번호를 입력해주세요" />
           </p>
-          <button>로그인</button>
+          <Btn>로그인</Btn>
           <p>
             <Link to="/sign">아직 회원이 아니신가요?</Link>
           </p>
@@ -28,11 +28,12 @@ const Form = styled.div`
 
   margin: 100px auto;
   /* background-color: gray; */
+  box-shadow: -60px 0px 100px -90px #000, 60px 0px 100px -90px #000;
 `;
 const FormInner = styled.div`
   padding: 100px 0;
   height: 600px;
-  border: 1px solid black;
+
   & > h2 {
     margin-bottom: 100px;
   }
@@ -46,4 +47,9 @@ const FormInner = styled.div`
     border-radius: 5px 5px;
     text-indent: 20px;
   }
+`;
+const Btn = styled.button`
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
 `;

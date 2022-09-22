@@ -1,4 +1,3 @@
-import Layout from "./layout";
 import Routing from "./route/routing";
 
 import GlobalStyles from "./styled/style";

@@ -10,23 +10,30 @@ const Layout = ({ children }) => {
           <LinkTo to="/sign">회원가입</LinkTo>
         </Sign>
         <Menu>
-          <li>메뉴1</li>
-          <li>메뉴2</li>
-          <li>메뉴3</li>
-          <li>메뉴4</li>
+          <li>
+            <Link to="">메뉴1</Link>
+          </li>
+          <li>
+            <Link to="">메뉴2</Link>
+          </li>
+          <li>
+            <Link to="">메뉴3</Link>
+          </li>
+          <li>
+            <Link to="">메뉴4</Link>
+          </li>
         </Menu>
       </Header>
       <Container>{children}</Container>
-      <Footer>
-        <div>회사이름</div>
-      </Footer>
     </>
   );
 };
 export default Layout;
 
 const Header = styled.div`
-  width: 100%; ;
+  width: 100%;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
 `;
 
 const Title = styled.h2`
@@ -40,22 +47,19 @@ const Sign = styled.ul`
 `;
 const LinkTo = styled(Link)`
   float: left;
-  margin-right: 10px;
-  font-size: 5px;
+  margin-right: 30px;
+  font-size: 10px;
 `;
 const Menu = styled.ul`
   width: 100%;
   display: flex;
   justify-content: space-around;
+  height: 40px;
+  line-height: 40px;
+  background-color: #000080;
+  color: white;
 `;
 const Container = styled.div`
   width: 100%;
   text-align: center;
-`;
-const Footer = styled.div`
-  width: 100%;
-  & div {
-    width: 1000px;
-    margin: 0 auto;
-  }
 `;
