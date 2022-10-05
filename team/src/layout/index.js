@@ -1,20 +1,23 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useRef, useEffect } from "react";
 const Layout = ({ children }) => {
   return (
     <>
       <Header>
-        <Title>제목</Title>
+        <Title>
+          <Link to="/">제목</Link>
+        </Title>
         <Sign>
           <LinkTo to="/login">로그인</LinkTo>
           <LinkTo to="/sign">회원가입</LinkTo>
         </Sign>
         <Menu>
           <li>
-            <Link to="">메뉴1</Link>
+            <Link to="/glen">글랜</Link>
           </li>
           <li>
-            <Link to="">메뉴2</Link>
+            <Link to="/test">test</Link>
           </li>
           <li>
             <Link to="">메뉴3</Link>
