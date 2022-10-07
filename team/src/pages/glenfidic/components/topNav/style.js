@@ -4,6 +4,7 @@ export const TopBanner = styled.div`
   margin: 0 auto;
   position: fixed;
   /* background-color: blue; */
+  z-index: 2;
 `;
 export const TopUl = styled.ul`
   display: flex;
@@ -11,7 +12,6 @@ export const TopUl = styled.ul`
   position: relative;
   top: -140px;
   background-color: black;
-  z-index: 2;
 
   & a {
     width: 150px;

@@ -23,12 +23,16 @@ const TopNav = () => {
   const [scroll, setScroll] = useState(false);
 
   const target = useRef(null);
+
+  //스크롤 감지 로직
   useEffect(() => {
     window.addEventListener("scroll", handlerScroll);
     return () => {
       window.removeEventListener("scroll", handlerScroll);
     };
   }, []);
+
+  //스크롤 Y축 50이상시 nav창 활성화
   const handlerScroll = () => {
     if (window.scrollY >= 50) {
       // target.current.style.top = "-100px";
@@ -37,6 +41,7 @@ const TopNav = () => {
       setScroll(false);
     }
   };
+
   return (
     <Styled.TopBanner>
       {scroll ? (
