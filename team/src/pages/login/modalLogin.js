@@ -1,5 +1,8 @@
-import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { useCallback, useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { useInput } from "../../hooks/useinput";
+import { LOGIN_R } from "../../reducer/userReducer";
 import * as style from "./style";
 const ModalLogin = ({ setLoginModalOpen, signModal }) => {
   //modal창 close 로직
@@ -28,17 +31,56 @@ const ModalLogin = ({ setLoginModalOpen, signModal }) => {
       setLoginModalOpen(false);
     }
   };
+
+  const [id, changeId, setId] = useInput("");
+  const [pw, changePw, setPw] = useInput("");
+  const dispatch = useDispatch();
+  const navigator = useNavigate();
+  const { me } = useSelector((state) => state.userReducer);
+
+  const loginHandler = useCallback(
+    (e) => {
+      e.preventDefault();
+      dispatch({
+        type: LOGIN_R,
+        data: {
+          id: id,
+          pw: pw,
+        },
+      });
+    },
+    [id, pw]
+  );
+
+  useEffect(() => {
+    if (!me) {
+      return;
+    }
+    navigator("/");
+  }, [me]);
   return (
     <style.Form ref={ModalRef}>
       <style.FormInner>
         <h2>로그인</h2>
         <p>
-          <input type="text" placeholder="아이디를 입력해주세요" />
+          <input
+            type="text"
+            placeholder="아이디를 입력해주세요"
+            value={id}
+            onChange={changeId}
+            required
+          />
         </p>
         <p>
-          <input type="password" placeholder="비밀번호를 입력해주세요" />
+          <input
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+            value={pw}
+            onChange={changePw}
+            required
+          />
         </p>
-        <style.Btn>로그인</style.Btn>
+        <style.Btn onClick={loginHandler}>로그인</style.Btn>
         <style.CloseBtn onClick={closeModal}>
           <style.CloseImg src="img/58007_close_icon.png" alt="" />
         </style.CloseBtn>

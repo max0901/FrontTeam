@@ -11,8 +11,14 @@ export const TopUl = styled.ul`
   justify-content: space-around;
   position: relative;
   top: -140px;
-  background-color: black;
 
+  background-color: black;
+  & .active > div {
+    background-color: green;
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s ease;
+  }
   & a {
     width: 150px;
     height: 80px;

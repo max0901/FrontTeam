@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const Form = styled.div`
   width: 800px;
-  height: 700px;
+  height: 900px;
   z-index: 999;
   margin: 100px auto;
 
@@ -23,7 +23,7 @@ export const FormInner = styled.div`
   }
   & p {
     margin: 70px 0;
-    color: white;
+    /* color: white; */
   }
   & p > input {
     width: 400px;
@@ -57,4 +57,10 @@ export const CloseBtn = styled.button`
 export const CloseImg = styled.img`
   width: 20px;
   height: 20px;
+`;
+export const CheckMessage = styled.p`
+  width: 800px;
+
+  font-size: 1rem;
+  color: orange;
 `;

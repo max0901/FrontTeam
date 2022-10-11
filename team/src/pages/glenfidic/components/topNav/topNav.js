@@ -36,6 +36,7 @@ const TopNav = () => {
   const handlerScroll = () => {
     if (window.scrollY >= 50) {
       // target.current.style.top = "-100px";
+      // console.log(window.scrollY);
       setScroll(true);
     } else {
       setScroll(false);
