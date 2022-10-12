@@ -1,8 +1,8 @@
 import Glen from "../pages/glenfidic";
 
 import Main from "../pages/main/index.js";
+import MyInfo from "../pages/myinfo";
 
-import TestPage from "../pages/testPage";
 const routes = () => [
   {
     path: "/",
@@ -14,8 +14,8 @@ const routes = () => [
     element: <Glen />,
   },
   {
-    path: "/test",
-    element: <TestPage />,
+    path: "/myinfo",
+    element: <MyInfo />,
   },
 ];
 export default routes;

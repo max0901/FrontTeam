@@ -40,7 +40,7 @@ const ModalLogin = ({ setLoginModalOpen, signModal }) => {
 
   const loginHandler = useCallback(
     (e) => {
-      e.preventDefault();
+      // e.preventDefault();
       dispatch({
         type: LOGIN_R,
         data: {
@@ -48,6 +48,11 @@ const ModalLogin = ({ setLoginModalOpen, signModal }) => {
           pw: pw,
         },
       });
+      if (me) {
+        setLoginModalOpen(false);
+      } else {
+        setLoginModalOpen(true);
+      }
     },
     [id, pw]
   );
