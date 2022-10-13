@@ -1,11 +1,14 @@
+import { useSelector } from "react-redux";
 import * as style from "./style";
 const MyInfoEdit = () => {
+  const { me } = useSelector((state) => state.userReducer);
+
   return (
     <style.EditLine>
       <p>ID</p>
-      <input type="text" />
+      <input type="text" value={me.id} />
       <p>Name</p>
-      <input type="text" />
+      <input type="text" value={me.name} />
       <p>Password</p>
       <input type="text" />
       <style.EditBtn>

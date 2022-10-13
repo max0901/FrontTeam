@@ -1,9 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import * as Style from "./style";
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ModalLogin from "../pages/login/modalLogin.js";
 import ModalSign from "../pages/sign/modalSign.js";
 import { useSelector } from "react-redux";
+import { dummyUser } from "../util/data";
 const Layout = ({ children }) => {
   //modal창들 활성화 로직
   const [LoginModalOpen, setLoginModalOpen] = useState(false);
@@ -17,11 +18,14 @@ const Layout = ({ children }) => {
   const navigator = useNavigate();
   const { me } = useSelector((state) => state.userReducer);
   // useEffect(() => {
-  //   if (!me) {
-  //     return;
-  //   }
-  //   navigator("/");
-  // }, [me]);
+  //   console.log(dummyUser);
+  // });
+  useEffect(() => {
+    if (me) {
+      return;
+    }
+    navigator("/");
+  }, [me]);
   return (
     <>
       <Style.Header>

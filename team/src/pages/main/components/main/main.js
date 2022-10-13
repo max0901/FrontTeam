@@ -36,7 +36,7 @@ const MainBanner = () => {
         </Link>
       </Styled.ImgBox>
       <Styled.ImgBox>
-        <Link to="/test" onMouseOver={onOver2} onMouseLeave={onLeave2}>
+        <Link to="/glen" onMouseOver={onOver2} onMouseLeave={onLeave2}>
           <Styled.Img2 src="img/Hendricks_Gin_Logo.jpg" ref={targetImg2} />
         </Link>
       </Styled.ImgBox>
