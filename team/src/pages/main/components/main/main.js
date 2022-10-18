@@ -29,18 +29,20 @@ const MainBanner = () => {
     targetImg.current.style.visibility = "visible";
   };
   return (
-    <Styled.MainUl>
-      <Styled.ImgBox>
-        <Link to="/glen" onMouseOver={onOver} onMouseLeave={onLeave}>
-          <Styled.Img1 src="img/glenfiddich_13.jpg" alt="" ref={targetImg} />
-        </Link>
-      </Styled.ImgBox>
-      <Styled.ImgBox>
-        <Link to="/glen" onMouseOver={onOver2} onMouseLeave={onLeave2}>
-          <Styled.Img2 src="img/Hendricks_Gin_Logo.jpg" ref={targetImg2} />
-        </Link>
-      </Styled.ImgBox>
-    </Styled.MainUl>
+    <>
+      <Styled.MainUl>
+        <Styled.ImgBox>
+          <Link to="/glen" onMouseOver={onOver} onMouseLeave={onLeave}>
+            <Styled.Img1 src="img/glenfiddich_13.jpg" alt="" ref={targetImg} />
+          </Link>
+        </Styled.ImgBox>
+        <Styled.ImgBox>
+          <Link to="/glen" onMouseOver={onOver2} onMouseLeave={onLeave2}>
+            <Styled.Img2 src="img/Hendricks_Gin_Logo.jpg" ref={targetImg2} />
+          </Link>
+        </Styled.ImgBox>
+      </Styled.MainUl>
+    </>
   );
 };
 export default MainBanner;
