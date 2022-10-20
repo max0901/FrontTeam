@@ -12,10 +12,10 @@ export const ContainerInner = styled.div`
 export const Text1 = styled.div`
   color: white;
   text-align: left;
-  line-height: 40px;
+  line-height: 30px;
   position: absolute;
-  left: 400px;
-  margin-top: 400px;
+  left: 250px;
+  margin-top: 250px;
   width: 500px;
   & hr {
     margin-bottom: 40px;
@@ -32,3 +32,8 @@ export const ImgSize = styled.img`
   width: 100%;
   height: 100vh;
 `;
+// export const div2 = styled.div``;
+// export const img1 = styled.img`
+//   position: absolute;
+//   top: 1000px;
+// `;

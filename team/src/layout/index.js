@@ -5,6 +5,7 @@ import ModalLogin from "../pages/login/modalLogin.js";
 import ModalSign from "../pages/sign/modalSign.js";
 import { useSelector } from "react-redux";
 import { dummyUser } from "../util/data";
+import { motion } from "framer-motion";
 const Layout = ({ children }) => {
   //modal창들 활성화 로직
   const [LoginModalOpen, setLoginModalOpen] = useState(false);
@@ -20,15 +21,20 @@ const Layout = ({ children }) => {
   // useEffect(() => {
   //   console.log(dummyUser);
   // });
-  useEffect(() => {
-    if (me) {
-      return;
-    }
-    navigator("/");
-  }, [me]);
+  // useEffect(() => {
+  //   if (me) {
+  //     return;
+  //   }
+  //   navigator("/");
+  // }, [me]);
   return (
     <>
-      <Style.Header>
+      <Style.Header
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <Style.Title>
           <Link to="/">제목</Link>
         </Style.Title>
@@ -63,7 +69,12 @@ const Layout = ({ children }) => {
         </Style.Menu>
       </Style.Header>
 
-      <Style.Container>
+      <Style.Container
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         {LoginModalOpen && (
           <Style.Background>
             <ModalLogin

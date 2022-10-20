@@ -63,6 +63,9 @@ const Main = () => {
           </div>
         </Styled.ContainerInner>
       ))}
+      {/* <Styled.div2>
+        <Styled.img1 src="img/Hendricks_Gin_Logo.jpg" />
+      </Styled.div2> */}
     </Styled.Container>
   );
 };

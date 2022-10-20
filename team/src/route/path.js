@@ -1,4 +1,5 @@
 import Glen from "../pages/glenfidic";
+import HideIndex from "../pages/main/hideindex";
 
 import Main from "../pages/main/index.js";
 import MyInfo from "../pages/myinfo";
@@ -7,6 +8,10 @@ const routes = () => [
   {
     path: "/",
     element: <Main />,
+  },
+  {
+    path: "/hide",
+    element: <HideIndex />,
   },
 
   {

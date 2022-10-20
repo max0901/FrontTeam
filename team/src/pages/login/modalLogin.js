@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useInput } from "../../hooks/useinput";
 import { LOGIN_R } from "../../reducer/userReducer";
 import * as style from "./style";
+import { motion } from "framer-motion";
 const ModalLogin = ({ setLoginModalOpen, signModal }) => {
   //modal창 close 로직
   const closeModal = () => {

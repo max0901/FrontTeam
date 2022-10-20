@@ -27,22 +27,29 @@ const TopNav = () => {
   //스크롤 감지 로직
   useEffect(() => {
     window.addEventListener("scroll", handlerScroll);
+
     return () => {
       window.removeEventListener("scroll", handlerScroll);
     };
   }, []);
 
+  const topscroll = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   //스크롤 Y축 50이상시 nav창 활성화
   const handlerScroll = () => {
     if (window.scrollY >= 50) {
       // target.current.style.top = "-100px";
       // console.log(window.scrollY);
+
       setScroll(true);
     } else {
       setScroll(false);
     }
   };
-
   return (
     <Styled.TopBanner>
       {scroll ? (
@@ -55,6 +62,9 @@ const TopNav = () => {
               </Link>
             ))}
           </Styled.TopUl>
+          <Styled.TopBtn onClick={topscroll}>
+            <img src="img/arrow_start_top_up_icon.png" />
+          </Styled.TopBtn>
         </>
       ) : (
         <div></div>
