@@ -5,26 +5,26 @@ const MainBanner = () => {
   const targetImg = useRef(null);
   const targetImg2 = useRef(null);
   const onOver = () => {
-    targetImg.current.style.width = "130vh";
+    targetImg.current.style.width = "175vh";
     targetImg.current.style.opacity = "1";
     targetImg2.current.style.width = "30vh";
     targetImg2.current.style.visibility = "hidden";
   };
   const onLeave = () => {
-    targetImg.current.style.width = "70vh";
-    targetImg2.current.style.width = "70vh";
+    targetImg.current.style.width = "85vh";
+    targetImg2.current.style.width = "85vh";
     targetImg.current.style.opacity = "0.5";
     targetImg2.current.style.visibility = "visible";
   };
   const onOver2 = () => {
-    targetImg2.current.style.width = "130vh";
+    targetImg2.current.style.width = "175vh";
     targetImg2.current.style.opacity = "1";
     targetImg.current.style.width = "30vh";
     targetImg.current.style.visibility = "hidden";
   };
   const onLeave2 = () => {
-    targetImg2.current.style.width = "70vh";
-    targetImg.current.style.width = "70vh";
+    targetImg2.current.style.width = "85vh";
+    targetImg.current.style.width = "85vh";
     targetImg2.current.style.opacity = "0.5";
     targetImg.current.style.visibility = "visible";
   };

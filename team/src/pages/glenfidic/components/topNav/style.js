@@ -10,7 +10,7 @@ export const TopUl = styled.ul`
   display: flex;
   justify-content: space-around;
   position: relative;
-  top: -135px;
+  top: -120px;
 
   background-color: black;
   & .active > div {
@@ -24,15 +24,16 @@ export const TopUl = styled.ul`
     height: 80px;
     display: block;
     color: white;
-    font-size: 13px;
-
+    font-size: 11px;
+    position: relative;
+    top: 10px;
     /* background-color: grey; */
     cursor: pointer;
   }
   & a > div {
     width: 120px;
-    height: 60px;
-    margin: 10px auto;
+    height: 50px;
+    margin: 5px auto;
     background-color: white;
     border-radius: 50%;
     visibility: hidden;
@@ -41,14 +42,15 @@ export const TopUl = styled.ul`
   & a > p {
     position: relative;
     width: 100px;
-    top: -55px;
+    top: -45px;
     left: 23px;
   }
 `;
 export const TopBtn = styled.button`
   width: 70px;
   height: 50px;
-
+  border: 0;
+  outline: 0;
   position: absolute;
   left: 94%;
   bottom: -680px;

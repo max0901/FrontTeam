@@ -62,7 +62,8 @@ const ModalLogin = ({ setLoginModalOpen, signModal }) => {
     if (!me) {
       return;
     }
-    navigator("/");
+    navigator("/hide");
+    setLoginModalOpen(false);
   }, [me]);
   return (
     <style.Form ref={ModalRef}>
@@ -91,9 +92,9 @@ const ModalLogin = ({ setLoginModalOpen, signModal }) => {
           <style.CloseImg src="img/58007_close_icon.png" alt="" />
         </style.CloseBtn>
         <p>
-          <Link to="" onClick={MoveSign}>
+          <style.TextSign to="" onClick={MoveSign}>
             아직 회원이 아니신가요?
-          </Link>
+          </style.TextSign>
         </p>
       </style.FormInner>
     </style.Form>

@@ -33,10 +33,18 @@ export const Menu = styled.ul`
   width: 100%;
   display: flex;
   justify-content: space-around;
-  height: 40px;
+  height: 25px;
   line-height: 40px;
   background-color: #000080;
   color: white;
+
+  & li {
+    font-size: 14px;
+  }
+  & li a {
+    position: relative;
+    top: -7px;
+  }
 `;
 export const Container = styled.div`
   width: 100%;
