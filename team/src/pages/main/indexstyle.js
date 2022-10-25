@@ -20,17 +20,34 @@ export const Section = styled.section`
     line-height: 40px;
   }
   & div hr {
-    width: 0px;
-    transition: all 3s ease;
+    width: 500px;
+
+    animation: move 3s alternate;
+    @keyframes move {
+      from {
+        width: 50px;
+      }
+      to {
+        width: 500px;
+      }
+    }
   }
-  &div h2 {
-    transition: all 5s ease;
+  & div h2 {
     display: inline-block;
     font-size: 1.75em;
-    opacity: 0;
+    opacity: 1;
     padding: 0.35em 1em;
     position: relative;
     z-index: 1;
+    animation: move1 5s alternate;
+    @keyframes move1 {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   }
 `;
 export const Btn = styled.button`

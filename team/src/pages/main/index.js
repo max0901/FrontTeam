@@ -12,8 +12,9 @@ const Main = () => {
   const Btn = useRef(null);
 
   useEffect(() => {
-    Line.current.style.width = "500px";
-    Line2.current.style.width = "500px";
+    // Line.current.style.width = "500px";
+
+    // Line2.current.style.width = "500px";
     H2.current.style.opacity = 1;
   }, []);
 

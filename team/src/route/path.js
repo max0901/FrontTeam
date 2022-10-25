@@ -1,7 +1,8 @@
 import Glen from "../pages/glenfidic";
-import HideIndex from "../pages/main/hideindex";
+import NewHide from "../pages/main/components/hide/newhide";
 
 import Main from "../pages/main/index.js";
+
 import MyInfo from "../pages/myinfo";
 
 const routes = () => [
@@ -11,7 +12,7 @@ const routes = () => [
   },
   {
     path: "/hide",
-    element: <HideIndex />,
+    element: <NewHide />,
   },
 
   {

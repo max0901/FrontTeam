@@ -1,17 +1,18 @@
 import styled from "styled-components";
 export const TopBanner = styled.div`
-  width: 100%;
-  margin: 0 auto;
+  width: 100px;
+
   position: fixed;
-  /* background-color: blue; */
-  z-index: 2;
+
+  z-index: 4;
+  top: 30%;
+  right: 3%;
 `;
 export const TopUl = styled.ul`
-  display: flex;
-  justify-content: space-around;
+  width: 100%;
   position: relative;
-  top: -120px;
-
+  right: 0px;
+  z-index: 5;
   background-color: black;
   & .active > div {
     background-color: green;
@@ -51,11 +52,36 @@ export const TopBtn = styled.button`
   height: 50px;
   border: 0;
   outline: 0;
-  position: absolute;
+  position: fixed;
   left: 94%;
-  bottom: -680px;
+  bottom: 80px;
   opacity: 0.5;
   & img {
     width: 40px;
   }
+`;
+export const BtnDot = styled.div`
+  position: relative;
+  right: -47%;
+  top: 100px;
+  & div {
+    margin-top: 10px;
+  }
+  & .active span {
+    background-color: green;
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s ease;
+  }
+`;
+
+export const Dot = styled.span`
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 `;
