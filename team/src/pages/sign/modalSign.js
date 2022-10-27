@@ -111,7 +111,7 @@ const ModalSign = ({ setSignModalOpen }) => {
 
         <style.Btn onClick={onRegistHandler}>회원가입</style.Btn>
         <style.CloseBtn onClick={closeModal}>
-          <style.CloseImg src="img/58007_close_icon.png" alt="" />
+          <style.CloseImg src="img/glen/58007_close_icon.png" alt="" />
         </style.CloseBtn>
       </style.FormInner>
     </style.Form>

@@ -5,15 +5,16 @@ export const TopBanner = styled.div`
   position: fixed;
 
   z-index: 4;
-  top: 30%;
   right: 3%;
+  top: 30%;
 `;
 export const TopUl = styled.ul`
-  width: 100%;
+  width: 142px;
   position: relative;
-  right: 0px;
+
   z-index: 5;
   background-color: black;
+
   & .active > div {
     background-color: green;
     visibility: visible;
@@ -62,6 +63,7 @@ export const TopBtn = styled.button`
 `;
 export const BtnDot = styled.div`
   position: relative;
+
   right: -47%;
   top: 100px;
   & div {
@@ -83,5 +85,5 @@ export const Dot = styled.span`
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: all 0.6s ease;
 `;

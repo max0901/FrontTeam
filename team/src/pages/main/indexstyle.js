@@ -7,7 +7,7 @@ export const Section = styled.section`
   overflow: hidden;
   position: relative;
   text-align: center;
-  background: url(img/Glenfiddich-Ourstory-2001.jpg) center no-repeat;
+  background: url(img/glen/Glenfiddich-Ourstory-2001.jpg) center no-repeat;
   background-size: cover;
 
   transition: all 1s ease;

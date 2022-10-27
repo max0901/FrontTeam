@@ -1,4 +1,6 @@
 import Glen from "../pages/glenfidic";
+import Handrick from "../pages/hadrick";
+
 import NewHide from "../pages/main/components/hide/newhide";
 
 import Main from "../pages/main/index.js";
@@ -18,6 +20,10 @@ const routes = () => [
   {
     path: "/glen",
     element: <Glen />,
+  },
+  {
+    path: "/hand",
+    element: <Handrick />,
   },
   {
     path: "/myinfo",

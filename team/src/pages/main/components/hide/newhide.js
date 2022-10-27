@@ -32,9 +32,9 @@ const NewHide = () => {
     >
       <Styled.MainInner>
         <Styled.ImgBox2>
-          <Link to="/">
+          <Link to="/hand">
             <Styled.Img2
-              src="img/Hendricks_Gin_Logo.jpg"
+              src="img/glen/Hendricks_Gin_Logo.jpg"
               alt=""
               ref={targetImg}
               onMouseOver={overBig}
@@ -45,7 +45,7 @@ const NewHide = () => {
         <Styled.ImgBox1>
           <Link to="/glen">
             <Styled.Img1
-              src="img/glenfiddich_13.jpg"
+              src="img/glen/glenfiddich_13.jpg"
               alt=""
               ref={targetImg2}
               onMouseOver={overBig2}

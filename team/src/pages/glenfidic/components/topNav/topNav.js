@@ -85,7 +85,7 @@ const TopNav = () => {
         )}
       </Styled.TopBanner>
       <Styled.TopBtn onClick={topscroll}>
-        <img src="img/arrow_start_top_up_icon.png" />
+        <img src="img/glen/arrow_start_top_up_icon.png" />
       </Styled.TopBtn>
     </>
   );

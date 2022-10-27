@@ -89,7 +89,7 @@ const ModalLogin = ({ setLoginModalOpen, signModal }) => {
         </p>
         <style.Btn onClick={loginHandler}>로그인</style.Btn>
         <style.CloseBtn onClick={closeModal}>
-          <style.CloseImg src="img/58007_close_icon.png" alt="" />
+          <style.CloseImg src="img/glen/58007_close_icon.png" alt="" />
         </style.CloseBtn>
         <p>
           <style.TextSign to="" onClick={MoveSign}>
