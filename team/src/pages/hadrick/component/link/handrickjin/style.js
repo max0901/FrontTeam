@@ -1,9 +1,13 @@
 import styled from "styled-components";
-export const List = styled.li``;
+export const List = styled.li`
+  margin: 0 auto;
+  background-color: #fffced;
+`;
 
 export const Inner = styled.div`
+  width: 2000px;
+  height: 90vh;
   display: flex;
-  /* width: 100vw; */
 `;
 export const Textbox = styled.div`
   width: 40%;
@@ -19,6 +23,9 @@ export const Textbox = styled.div`
     font-family: "Bembo MT W01 Bold", "Georgia", "Times New Roman", Serif;
     font-style: italic;
   }
+`;
+export const head = styled.img`
+  width: 100%;
 `;
 export const Boom = styled.img`
   width: 70px;
@@ -56,7 +63,7 @@ export const Balloon = styled.img`
   width: 70px;
   height: 70px;
   position: absolute;
-  top: 750px;
+  top: 70%;
   right: 700px;
   animation: move 2s infinite alternate;
   @keyframes move {

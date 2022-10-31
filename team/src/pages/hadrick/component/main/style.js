@@ -1,17 +1,16 @@
 import styled from "styled-components";
 export const MainInner = styled.div`
-  background-color: #fffced;
   width: 100%;
-  height: 90vh;
-  overflow: hidden;
+  height: 100vh;
   & ul {
+    /* height: 80vh; */
     display: flex;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 `;
 export const BtnDot = styled.div`
-  position: absolute;
+  position: fixed;
   top: 200px;
   left: 50%;
   & .active span {
@@ -31,4 +30,24 @@ export const Dot = styled.span`
   border-radius: 50%;
   display: inline-block;
   transition: all 0.6s ease;
+`;
+export const left = styled.div`
+  height: 200px;
+  float: left;
+  position: fixed;
+  top: 50%;
+  left: 30px;
+  opacity: 0;
+  transition: all 1s ease;
+  z-index: 5;
+`;
+export const right = styled.div`
+  height: 200px;
+  float: right;
+  position: fixed;
+  top: 53%;
+  right: 30px;
+  opacity: 0;
+  transition: all 1s ease;
+  z-index: 5;
 `;

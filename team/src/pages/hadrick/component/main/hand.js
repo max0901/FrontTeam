@@ -3,6 +3,8 @@ import HandricksJin from "../link/handrickjin/handrickjin";
 import * as styled from "./style";
 import { Link } from "react-scroll";
 import Luna from "../link/lunar/lunajin";
+import Neptunia from "../link/neptunia/neptunia";
+import Orbium from "../link/orbium/orbium";
 const Hand = () => {
   const [nav, setnav] = useState([
     {
@@ -22,16 +24,39 @@ const Hand = () => {
       title: "핸드릭스진",
     },
   ]);
-  const slideTotal = 4;
+  const right = useRef(null);
+  const left = useRef(null);
+  const slider = useRef(null);
+  const mouseover = () => {
+    right.current.style.opacity = 0.5;
+    left.current.style.opacity = 0.5;
+  };
+  const mouseleave = () => {
+    right.current.style.opacity = 0;
+    left.current.style.opacity = 0;
+  };
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slideRef = useRef(null);
+  const totalSlide = 3;
+  const [slideList, setSlideList] = useState(0);
 
+  const rightbtn = () => {
+    if (slideList >= totalSlide) {
+      setSlideList(0);
+    } else {
+      setSlideList(slideList + 1);
+    }
+  };
+  const leftbtn = () => {
+    if (slideList === 0) {
+      setSlideList(totalSlide);
+    } else {
+      setSlideList(slideList - 1);
+    }
+  };
   useEffect(() => {
-    slideRef.current.style.transition = "all 0.5e ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
-  }, [currentSlide]);
-
+    slider.current.style.transition = "all 0.5s ease-in-out";
+    slider.current.style.transform = `translateX(-${slideList * 2000}px)`;
+  }, [slideList]);
   return (
     <styled.MainInner>
       <styled.BtnDot>
@@ -41,9 +66,19 @@ const Hand = () => {
           </Link>
         ))}
       </styled.BtnDot>
-      <ul ref={slideRef}>
+      <div onMouseOver={mouseover} onMouseLeave={mouseleave}>
+        <styled.right ref={right} onClick={rightbtn}>
+          <img src="img/hand/right.png" alt="" />
+        </styled.right>
+        <styled.left ref={left} onClick={leftbtn}>
+          <img src="img/hand/left.png" alt="" />
+        </styled.left>
+      </div>
+      <ul ref={slider}>
         <HandricksJin id="1" />
         <Luna id="2" />
+        <Neptunia id="3" />
+        <Orbium id="4" />
       </ul>
     </styled.MainInner>
   );

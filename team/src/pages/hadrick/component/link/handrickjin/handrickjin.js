@@ -2,7 +2,7 @@ import * as styled from "./style";
 const HandricksJin = () => {
   return (
     <styled.List id="1">
-      <img src="img/hand/headdeco.png" alt="" />
+      <styled.head src="img/hand/headdeco.png" alt="" />
       <styled.Boom src="img/hand/boom.png" alt="" />
       <styled.Boom2 src="img/hand/boom.png" alt="" />
       <styled.Inner>

@@ -6,6 +6,7 @@ const Luna = () => {
       <styled.Inner>
         <img src="img/hand/luna.png" alt="" />
         <styled.Textbox>
+          <styled.star src="img/hand/start.png" alt="" />
           <h1>HENDRICK’S LUNAR</h1>
           <span>LIMITED RELEASE</span>
           <p>
