@@ -36,8 +36,8 @@ export const star = styled.img`
   position: relative;
   top: 20%;
   right: 500px;
-  animation: move 1s infinite alternate;
-  @keyframes move {
+  animation: Ud 1s infinite alternate;
+  @keyframes Ud {
     from {
       transform: translateY(5%);
     }

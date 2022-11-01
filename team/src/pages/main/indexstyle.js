@@ -39,8 +39,8 @@ export const Section = styled.section`
     padding: 0.35em 1em;
     position: relative;
     z-index: 1;
-    animation: move1 5s alternate;
-    @keyframes move1 {
+    animation: linemove 5s alternate;
+    @keyframes linemove1 {
       from {
         opacity: 0;
       }

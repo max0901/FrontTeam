@@ -6,6 +6,7 @@ import NewHide from "../pages/main/components/hide/newhide";
 import Main from "../pages/main/index.js";
 
 import MyInfo from "../pages/myinfo";
+import Wine from "../pages/wine";
 
 const routes = () => [
   {
@@ -24,6 +25,10 @@ const routes = () => [
   {
     path: "/hand",
     element: <Handrick />,
+  },
+  {
+    path: "/wine",
+    element: <Wine />,
   },
   {
     path: "/myinfo",

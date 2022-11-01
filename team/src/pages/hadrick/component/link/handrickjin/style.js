@@ -33,8 +33,8 @@ export const Boom = styled.img`
   position: absolute;
   top: 200px;
   right: 1700px;
-  animation: move 4s infinite alternate;
-  @keyframes move {
+  animation: RL1 4s infinite alternate;
+  @keyframes RL1 {
     from {
       transform: rotate(10deg);
     }
@@ -49,8 +49,8 @@ export const Boom2 = styled.img`
   position: absolute;
   top: 250px;
   right: 300px;
-  animation: move 3s infinite alternate;
-  @keyframes move {
+  animation: RL2 3s infinite alternate;
+  @keyframes RL2 {
     from {
       transform: rotate(10deg);
     }
@@ -65,8 +65,8 @@ export const Balloon = styled.img`
   position: absolute;
   top: 70%;
   right: 700px;
-  animation: move 2s infinite alternate;
-  @keyframes move {
+  animation: RL3 2s infinite alternate;
+  @keyframes RL3 {
     from {
       transform: rotate(10deg);
     }

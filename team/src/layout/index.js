@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
             <Link to="/hand">핸드</Link>
           </li>
           <li>
-            <Link to="">메뉴3</Link>
+            <Link to="/wine">와인</Link>
           </li>
           <li>
             <Link to="">메뉴4</Link>

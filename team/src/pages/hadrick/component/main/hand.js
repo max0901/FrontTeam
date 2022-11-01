@@ -53,9 +53,22 @@ const Hand = () => {
       setSlideList(slideList - 1);
     }
   };
+  const slideX = window.scrollX;
   useEffect(() => {
-    slider.current.style.transition = "all 0.5s ease-in-out";
-    slider.current.style.transform = `translateX(-${slideList * 2000}px)`;
+    const interval = setTimeout(() => {
+      if (slideList >= totalSlide) {
+        setSlideList(0);
+        console.log(slideX);
+      } else {
+        setSlideList(slideList + 1);
+      }
+
+      return () => clearTimeout(interval);
+    }, 5000);
+    slider.current.style.transition = "all 2s ease-in-out";
+    slider.current.style.transform = `translateX(-${
+      slideX + slideList * 2000
+    }px)`;
   }, [slideList]);
   return (
     <styled.MainInner>

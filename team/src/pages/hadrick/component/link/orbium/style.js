@@ -19,8 +19,8 @@ export const proImg = styled.img`
   position: absolute;
   right: -4400px;
   top: 100px;
-  animation: move 4s infinite alternate;
-  @keyframes move {
+  animation: RL4 4s infinite alternate;
+  @keyframes RL4 {
     from {
       transform: rotate(10deg);
     }
@@ -31,7 +31,7 @@ export const proImg = styled.img`
 `;
 export const Textbox = styled.div`
   width: 40%;
-  margin-top: 100px;
+  margin-top: 200px;
   line-height: 1.5;
   color: white;
 

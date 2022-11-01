@@ -35,7 +35,7 @@ export const Menu = styled.ul`
   justify-content: space-around;
   height: 25px;
   line-height: 40px;
-  background-color: #000080;
+  background-color: #9c6f50;
   color: white;
 
   & li {

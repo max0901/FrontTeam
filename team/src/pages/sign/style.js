@@ -23,7 +23,7 @@ export const FormInner = styled.div`
     font-size: 20px;
   }
   & p {
-    margin: 50px 0;
+    margin: 40px 0 0 0;
     color: white;
   }
   & p > input {
@@ -48,6 +48,7 @@ export const Btn = styled.button`
   border: 1px solid white;
   color: white;
   font-size: 13px;
+  margin: 40px 0 0 0;
 `;
 export const CloseBtn = styled.button`
   position: absolute;
@@ -65,9 +66,8 @@ export const TextSign = styled.a`
   letter-spacing: 5px;
 `;
 
-export const CheckMessage = styled.p`
-  width: 800px;
-
-  font-size: 1rem;
+export const CheckMessage = styled.div`
+  margin-top: 20px;
+  font-size: 10px;
   color: orange;
 `;

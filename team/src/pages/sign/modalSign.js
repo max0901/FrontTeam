@@ -108,8 +108,9 @@ const ModalSign = ({ setSignModalOpen }) => {
             비밀번호가 일치하지 않습니다!!!!
           </style.CheckMessage>
         )}
-
-        <style.Btn onClick={onRegistHandler}>회원가입</style.Btn>
+        <div>
+          <style.Btn onClick={onRegistHandler}>회원가입</style.Btn>
+        </div>
         <style.CloseBtn onClick={closeModal}>
           <style.CloseImg src="img/glen/58007_close_icon.png" alt="" />
         </style.CloseBtn>
