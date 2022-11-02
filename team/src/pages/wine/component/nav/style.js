@@ -25,4 +25,8 @@ export const navUl = styled.ul`
     padding: 10px 11px 8px;
     border-radius: 2px;
   }
+  & li:hover {
+    background-color: #9d6f4d;
+    color: white;
+  }
 `;

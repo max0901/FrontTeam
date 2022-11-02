@@ -30,34 +30,64 @@ const All = () => {
       dt: "Toro Seleccion Malbec",
       dd: "토로 셀렉시용 말벡",
     },
+    {
+      id: 5,
+      img: "img/wine/malbeck.jpg",
+      dt: "Toro Seleccion Malbec",
+      dd: "토로 셀렉시용 말벡",
+    },
+    {
+      id: 6,
+      img: "img/wine/malbeck.jpg",
+      dt: "Toro Seleccion Malbec",
+      dd: "토로 셀렉시용 말벡",
+    },
+    {
+      id: 7,
+      img: "img/wine/malbeck.jpg",
+      dt: "Toro Seleccion Malbec",
+      dd: "토로 셀렉시용 말벡",
+    },
+    {
+      id: 8,
+      img: "img/wine/malbeck.jpg",
+      dt: "Toro Seleccion Malbec",
+      dd: "토로 셀렉시용 말벡",
+    },
+    {
+      id: 9,
+      img: "img/wine/malbeck.jpg",
+      dt: "Toro Seleccion Malbec",
+      dd: "토로 셀렉시용 말벡",
+    },
   ]);
+
   const hiddenRef = useRef(null);
-  const [hidden, setHidden] = useState(false);
-  const onmouse = () => {
-    setHidden(true);
-  };
-  const outmouse = () => {
-    setHidden(false);
-  };
+  const visibleRef = useRef(null);
+
   return (
     <styled.product>
       {prod.map((v) => (
-        <styled.prod onMouseOver={onmouse} onMouseLeave={outmouse} key={v.id}>
+        <styled.prod ref={visibleRef}>
           <img src={v.img} alt="" />
           <dl>
-            <dt>{v.dt}</dt>
-            <dd>{v.dd}</dd>
+            <styled.Dt>{v.dt}</styled.Dt>
+            <styled.DD>{v.dd}</styled.DD>
           </dl>
-          {hidden && (
-            <styled.divHidden ref={hiddenRef} key={v.id}>
+
+          <>
+            <styled.divHidden ref={hiddenRef}>
               <styled.Info>
-                <li>나라: {v.나라}</li>
-                <li>품종: {v.품종}</li>
-                <li>ALV: {v.ALV}</li>
-                <li>PLATE: {v.plate}</li>
+                <li>
+                  나라 : {v.id}
+                  {v.나라}
+                </li>
+                <li>품종 : {v.품종}</li>
+                <li>ALV : {v.ALV}</li>
+                <li>PLATE : {v.plate}</li>
               </styled.Info>
             </styled.divHidden>
-          )}
+          </>
         </styled.prod>
       ))}
     </styled.product>
