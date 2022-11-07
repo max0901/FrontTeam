@@ -65,10 +65,22 @@ const Nav = () => {
           </styled.navUl>
         </styled.navInner>
       </styled.navContainer>
-      {all ? <All /> : ""}
-      {red ? <Red /> : ""}
-      {white ? <White /> : ""}
-      {spark ? <Sparking /> : ""}
+
+      {all ? (
+        <All
+          redClick={redClick}
+          whiteClick={whiteClick}
+          sparkClick={sparkClick}
+        />
+      ) : red ? (
+        <Red />
+      ) : white ? (
+        <White />
+      ) : spark ? (
+        <Sparking />
+      ) : (
+        <All />
+      )}
     </>
   );
 };

@@ -76,13 +76,12 @@ export const ImgBox2 = styled.div`
   }
 `;
 export const Box = styled.div`
-  background-color: #47b267;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   position: relative;
   left: 500px;
-  top: 100px;
+  top: -200px;
   animation: move1 2s alternate;
   @keyframes move1 {
     from {
@@ -99,7 +98,7 @@ export const Box = styled.div`
     to {
       opacity: 1;
       left: 500px;
-      top: 100px;
+      top: -200px;
     }
   }
 `;
@@ -140,6 +139,12 @@ export const Img1 = styled.img`
 export const Img2 = styled.img`
   width: 400px;
   height: 400px;
+  border-radius: 50%;
+  transition: all 1s ease;
+`;
+export const Img3 = styled.img`
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   transition: all 1s ease;
 `;

@@ -1,18 +1,23 @@
 import styled from "styled-components";
 export const List = styled.li`
-  margin: 0 auto;
+  width: 2000px;
   background-color: #fffced;
+
+  z-index: 10;
+  /* padding-right: 700px; */
 `;
 
 export const Inner = styled.div`
-  width: 2000px;
   height: 90vh;
   display: flex;
+  width: 100%;
+  z-index: 10;
 `;
 export const Textbox = styled.div`
   width: 40%;
   margin-top: 200px;
   line-height: 1.5;
+  z-index: 10;
   & h1 {
     font-size: 60px;
     margin-bottom: 40px;
@@ -63,7 +68,7 @@ export const Balloon = styled.img`
   width: 70px;
   height: 70px;
   position: absolute;
-  top: 70%;
+  top: 80%;
   right: 700px;
   animation: RL3 2s infinite alternate;
   @keyframes RL3 {

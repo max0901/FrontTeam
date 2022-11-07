@@ -6,6 +6,7 @@ import { useRef } from "react";
 const NewHide = () => {
   const targetImg = useRef(null);
   const targetImg2 = useRef(null);
+  const targetImg3 = useRef(null);
 
   const overBig = () => {
     targetImg.current.style.width = "500px";
@@ -22,6 +23,14 @@ const NewHide = () => {
   const leaveSmall2 = () => {
     targetImg2.current.style.width = "300px";
     targetImg2.current.style.height = "300px";
+  };
+  const overBig3 = () => {
+    targetImg3.current.style.width = "300px";
+    targetImg3.current.style.height = "300px";
+  };
+  const leaveSmall3 = () => {
+    targetImg3.current.style.width = "200px";
+    targetImg3.current.style.height = "200px";
   };
   return (
     <Layout
@@ -53,7 +62,17 @@ const NewHide = () => {
             />
           </Link>
         </Styled.ImgBox1>
-        <Styled.Box></Styled.Box>
+        <Styled.Box>
+          <Link to="/wine">
+            <Styled.Img3
+              src="img/wine/winelogo.png"
+              alt=""
+              ref={targetImg3}
+              onMouseOver={overBig3}
+              onMouseLeave={leaveSmall3}
+            />
+          </Link>
+        </Styled.Box>
         <Styled.Box1></Styled.Box1>
         <Styled.TextBox>
           <h2>LIQUOR</h2>

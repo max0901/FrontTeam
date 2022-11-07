@@ -1,12 +1,19 @@
 import styled from "styled-components";
 export const MainInner = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 90vh;
+`;
+export const Ulbox = styled.div`
+  width: 2000px;
+  height: 90vh;
+  display: inline-block;
+  overflow: hidden;
   & ul {
-    /* height: 80vh; */
+    width: 10000px;
     display: flex;
-    width: 100%;
-    /* overflow: hidden; */
+  }
+  & ul li {
+    width: 2000px;
   }
 `;
 export const BtnDot = styled.div`

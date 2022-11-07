@@ -1,25 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import * as Styled from "./style";
 import { Link } from "react-scroll";
+import { useSelector } from "react-redux";
 const TopNav = () => {
-  const [nav, setNav] = useState([
-    {
-      id: 1,
-      title: "15년 기프트 컬렉션",
-    },
-    {
-      id: 2,
-      title: "1977년 빈티지 리저브",
-    },
-    {
-      id: 3,
-      title: "Glenfiddich Excellence",
-    },
-    {
-      id: 4,
-      title: "12년 기프트 컬렉션",
-    },
-  ]);
+  const { glen } = useSelector((state) => state.glenReducer);
   const [scroll, setScroll] = useState(true);
   const [overBtn, setOverBtn] = useState(true);
   const target = useRef(null);
@@ -43,7 +27,7 @@ const TopNav = () => {
   const handlerScroll = () => {
     if (window.scrollY >= 50) {
       // target.current.style.top = "-100px";
-      // console.log(window.scrollY);
+      console.log(scroll);
 
       setScroll(false);
     } else {
@@ -63,7 +47,7 @@ const TopNav = () => {
           <div></div>
         ) : overBtn ? (
           <Styled.BtnDot>
-            {nav.map((v) => (
+            {glen.map((v) => (
               <div>
                 <Link to={v.id} spy={true} smooth={true}>
                   <Styled.Dot></Styled.Dot>
@@ -74,10 +58,10 @@ const TopNav = () => {
         ) : (
           <>
             <Styled.TopUl ref={target} onMouseLeave={onLeave}>
-              {nav.map((v) => (
+              {glen.map((v) => (
                 <Link to={v.id} spy={true} smooth={true}>
                   <div></div>
-                  <p>{v.title}</p>
+                  <p>{v.h1}</p>
                 </Link>
               ))}
             </Styled.TopUl>

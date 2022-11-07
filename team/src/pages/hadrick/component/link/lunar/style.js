@@ -1,11 +1,12 @@
 import styled from "styled-components";
 export const List = styled.li`
   background-color: #121b34;
-  margin: 0 auto;
+
   z-index: 4;
+  width: 2000px;
 `;
 export const Inner = styled.div`
-  width: 2000px;
+  width: 100%;
   display: flex;
 `;
 export const Textbox = styled.div`

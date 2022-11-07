@@ -58,7 +58,6 @@ const Hand = () => {
     const interval = setTimeout(() => {
       if (slideList >= totalSlide) {
         setSlideList(0);
-        console.log(slideX);
       } else {
         setSlideList(slideList + 1);
       }
@@ -66,19 +65,17 @@ const Hand = () => {
       return () => clearTimeout(interval);
     }, 5000);
     slider.current.style.transition = "all 2s ease-in-out";
-    slider.current.style.transform = `translateX(-${
-      slideX + slideList * 2000
-    }px)`;
+    slider.current.style.transform = `translateX(-${slideList * 2000}px)`;
   }, [slideList]);
   return (
     <styled.MainInner>
-      <styled.BtnDot>
+      {/* <styled.BtnDot>
         {nav.map((v) => (
           <Link to={v.id} spy={true} smooth={true}>
             <styled.Dot></styled.Dot>
           </Link>
         ))}
-      </styled.BtnDot>
+      </styled.BtnDot> */}
       <div onMouseOver={mouseover} onMouseLeave={mouseleave}>
         <styled.right ref={right} onClick={rightbtn}>
           <img src="img/hand/right.png" alt="" />
@@ -87,12 +84,14 @@ const Hand = () => {
           <img src="img/hand/left.png" alt="" />
         </styled.left>
       </div>
-      <ul ref={slider}>
-        <HandricksJin id="1" />
-        <Luna id="2" />
-        <Neptunia id="3" />
-        <Orbium id="4" />
-      </ul>
+      <styled.Ulbox>
+        <ul ref={slider}>
+          <HandricksJin id="1" />
+          <Luna id="2" />
+          <Neptunia id="3" />
+          <Orbium id="4" />
+        </ul>
+      </styled.Ulbox>
     </styled.MainInner>
   );
 };
