@@ -1,13 +1,15 @@
 import Routing from "./route/routing";
 
 import GlobalStyles from "./styled/style";
-
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 function App() {
   return (
     <>
-      <GlobalStyles />
-
-      <Routing />
+      <Provider store={store}>
+        <GlobalStyles />
+        <Routing />
+      </Provider>
     </>
   );
 }

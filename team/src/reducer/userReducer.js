@@ -1,4 +1,5 @@
 import producer from "immer";
+
 const initialState = {
   me: null,
   sign: null,
@@ -12,7 +13,6 @@ const initialState = {
   SignDone: false,
   SignError: null,
 };
-
 export const LOGIN_R = "LOGIN_IN_REQUEST";
 export const LOGIN_S = "LOGIN_IN_SUCCESS";
 export const LOGIN_F = "LOGIN_IN_FAILURE";

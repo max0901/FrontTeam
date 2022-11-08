@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import ModalLogin from "../pages/login/modalLogin.js";
 import ModalSign from "../pages/sign/modalSign.js";
 import { useSelector } from "react-redux";
-import { dummyUser } from "../util/data";
+
 import { motion } from "framer-motion";
 const Layout = ({ children }) => {
   //modal창들 활성화 로직
@@ -38,21 +38,21 @@ const Layout = ({ children }) => {
         <Style.Title>
           <Link to="/">제목</Link>
         </Style.Title>
-        {me ? (
-          <Style.Sign>
-            <Style.LinkTo to="/myinfo">마이페이지</Style.LinkTo>
-            <Style.LinkTo to="/">로그아웃</Style.LinkTo>
-          </Style.Sign>
-        ) : (
-          <Style.Sign>
-            <Style.LinkTo to="" onClick={loginModal}>
-              로그인
-            </Style.LinkTo>
-            <Style.LinkTo to="" onClick={signModal}>
-              회원가입
-            </Style.LinkTo>
-          </Style.Sign>
-        )}
+        {/* {me ? ( */}
+        <Style.Sign>
+          <Style.LinkTo to="/myinfo">마이페이지</Style.LinkTo>
+          <Style.LinkTo to="/">로그아웃</Style.LinkTo>
+        </Style.Sign>
+        {/* ) : ( */}
+        <Style.Sign>
+          <Style.LinkTo to="" onClick={loginModal}>
+            로그인
+          </Style.LinkTo>
+          <Style.LinkTo to="" onClick={signModal}>
+            회원가입
+          </Style.LinkTo>
+        </Style.Sign>
+        {/* )} */}
         <Style.Menu>
           <li>
             <Link to="/glen">글랜</Link>

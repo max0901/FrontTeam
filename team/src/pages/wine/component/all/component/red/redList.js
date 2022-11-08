@@ -1,66 +1,8 @@
 import { useRef, useState } from "react";
+import { useSelector } from "react-redux";
 import * as styled from "./style";
 const RedList = () => {
-  const [prod, setProd] = useState([
-    {
-      id: 1,
-      img: "img/wine/malbeck.jpg",
-      dt: "Toro Seleccion Malbec",
-      dd: "토로 셀렉시용 말벡",
-      ALV: "12.5%",
-      품종: "100% 말벡",
-      나라: "아르헨티나",
-      plate: "부드러운 탄닌과 과일맛이 특징",
-    },
-    {
-      id: 2,
-      img: "img/wine/malbeck.jpg",
-      dt: "Toro Seleccion Malbec",
-      dd: "토로 셀렉시용 말벡",
-    },
-    {
-      id: 3,
-      img: "img/wine/malbeck.jpg",
-      dt: "Toro Seleccion Malbec",
-      dd: "토로 셀렉시용 말벡",
-    },
-    {
-      id: 4,
-      img: "img/wine/malbeck.jpg",
-      dt: "Toro Seleccion Malbec",
-      dd: "토로 셀렉시용 말벡",
-    },
-    {
-      id: 5,
-      img: "img/wine/malbeck.jpg",
-      dt: "Toro Seleccion Malbec",
-      dd: "토로 셀렉시용 말벡",
-    },
-    {
-      id: 6,
-      img: "img/wine/malbeck.jpg",
-      dt: "Toro Seleccion Malbec",
-      dd: "토로 셀렉시용 말벡",
-    },
-    {
-      id: 7,
-      img: "img/wine/malbeck.jpg",
-      dt: "Toro Seleccion Malbec",
-      dd: "토로 셀렉시용 말벡",
-    },
-    {
-      id: 8,
-      img: "img/wine/malbeck.jpg",
-      dt: "Toro Seleccion Malbec",
-      dd: "토로 셀렉시용 말벡",
-    },
-    {
-      id: 9,
-      img: "img/wine/malbeck.jpg",
-      dt: "Toro Seleccion Malbec",
-      dd: "토로 셀렉시용 말벡",
-    },
-  ]);
+  const { red } = useSelector((state) => state.wine);
   const right = useRef(null);
   const left = useRef(null);
   const slider = useRef(null);
@@ -99,7 +41,7 @@ const RedList = () => {
   return (
     <div>
       <ul ref={slider} onMouseOver={mouseover} onMouseLeave={mouseleave}>
-        {prod.map((v) => (
+        {red.map((v) => (
           <styled.prod ref={visibleRef}>
             <img src={v.img} alt="" />
             <dl>

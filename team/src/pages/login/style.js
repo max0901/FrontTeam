@@ -49,6 +49,7 @@ export const Btn = styled.button`
   border: 1px solid white;
   color: white;
   font-size: 13px;
+  cursor: pointer;
 `;
 export const CloseBtn = styled.button`
   position: absolute;

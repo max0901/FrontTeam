@@ -3,7 +3,7 @@ import * as Styled from "./style";
 import { Link } from "react-scroll";
 import { useSelector } from "react-redux";
 const TopNav = () => {
-  const { glen } = useSelector((state) => state.glenReducer);
+  const { glen } = useSelector((state) => state.glen);
   const [scroll, setScroll] = useState(true);
   const [overBtn, setOverBtn] = useState(true);
   const target = useRef(null);

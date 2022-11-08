@@ -1,8 +1,7 @@
-import { useState, useRef, useEffect } from "react";
 import * as Styled from "./style.js";
 import { useSelector } from "react-redux";
 const Main = () => {
-  const { glen } = useSelector((state) => state.glenReducer);
+  const { glen } = useSelector((state) => state.glen);
   return (
     <Styled.Container>
       {glen.map((v) => (

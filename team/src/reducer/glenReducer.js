@@ -1,4 +1,4 @@
-import produce from "immer";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   glen: [
@@ -45,12 +45,21 @@ const initialState = {
   ],
 };
 
-const glenlist = (state = initialState, action) => {
-  return produce(state, (draft) => {
-    switch (action.type) {
-      default:
-        return state;
-    }
-  });
-};
-export default glenlist;
+export const glenReducer = createSlice({
+  name: "glen",
+  initialState,
+  reducers: {
+    addtodo: (state, action) => {
+      state.glen.unshift(action.payload);
+    },
+    removetodo: (state, action) => {
+      state.glen = state.glen.filter((item) => item.id !== action.payload.id);
+    },
+    updatetodo: (state, action) => {
+      const glen = state.glen.find((item) => item.id === action.payload.id);
+      glen.h1 = action.payload.h1;
+    },
+  },
+});
+
+export const { addtodo, removetodo, updatetodo } = glenReducer.actions;
