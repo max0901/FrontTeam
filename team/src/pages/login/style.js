@@ -28,8 +28,8 @@ export const FormInner = styled.div`
     color: white;
   }
   & p > input {
-    width: 300px;
-    height: 40px;
+    width: auto;
+    height: auto;
     margin-left: 20px;
     border-radius: 5px 5px;
     text-indent: 18px;

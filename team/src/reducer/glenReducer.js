@@ -57,7 +57,13 @@ export const glenReducer = createSlice({
     },
     updatetodo: (state, action) => {
       const glen = state.glen.find((item) => item.id === action.payload.id);
+      glen.h4 = action.payload.h4;
       glen.h1 = action.payload.h1;
+      glen.h1_1 = action.payload.h1_1;
+      glen.span = action.payload.span;
+      glen.p = action.payload.p;
+      glen.bold = action.payload.bold;
+      glen.img = action.payload.img;
     },
   },
 });
