@@ -2,13 +2,15 @@ import styled from "styled-components";
 export const BoxInner = styled.div`
   margin: auto 50px;
   & p input {
-    width: 200px;
-    height: 30px;
+    width: auto;
+    height: auto;
     margin-left: 20px;
     border-radius: 10px;
     text-indent: 18px;
+    overflow: auto;
   }
 `;
+
 export const BtnBox = styled.div`
   position: relative;
   left: 30%;
