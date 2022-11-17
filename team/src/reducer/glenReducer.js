@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   glen: [
     {
-      id: 1,
+      id: 4,
       h4: "글랜피딕",
       h1: "15년 기프트 컬렉션",
       span: "산뜻한 향신료 끝 풍부한 과일의 풍미가 어우러진 위스키",
@@ -12,7 +12,7 @@ const initialState = {
       img: "img/glen/15년.jpg",
     },
     {
-      id: 2,
+      id: 3,
       h4: "글렌 데코레이션",
       h1: "1977 년 빈티지 리저브",
       span: "산뜻한 향신료 끝 풍부한 과일의 풍미가 어우러진 위스키",
@@ -21,7 +21,7 @@ const initialState = {
       img: "img/glen/1997sus.jpg",
     },
     {
-      id: 3,
+      id: 2,
       h4: "글랜피딕",
       h1: "Glenfiddich Excellence",
       h1_1: "26세",
@@ -33,7 +33,7 @@ const initialState = {
     },
 
     {
-      id: 4,
+      id: 1,
       h4: "글랜피딕",
       h1: "12년 기프트 컬렉션",
 

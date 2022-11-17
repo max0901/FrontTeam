@@ -14,3 +14,9 @@ export const BannerBox = styled.div`
   border-radius: 20px;
   margin-bottom: 20px;
 `;
+export const AddBtn = styled.button`
+  border: none;
+  position: relative;
+  left: 400px;
+  margin-bottom: 30px;
+`;

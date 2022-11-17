@@ -34,6 +34,7 @@ const MyInfoMainL = () => {
     setList(false);
     setGlenList(true);
   };
+
   return (
     <>
       <style.MainLul>

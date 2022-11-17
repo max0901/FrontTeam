@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useInput } from "../../../../../../hooks/useinput";
 import { updatetodo } from "../../../../../../reducer/glenReducer";
 import * as style from "./style";
-const Elist = ({ glen, setEdit }) => {
+const Elist = ({ glen, setEdit, removeBtn }) => {
   const dispatch = useDispatch();
   // const inputTarget = useRef(null);
   // useEffect(() => {
@@ -68,7 +68,7 @@ const Elist = ({ glen, setEdit }) => {
         <style.BtnBox>
           <button onClick={CancleBtn}>취소</button>
           <button onClick={onEdit}>완료</button>
-          <button>삭제</button>
+          <button onClick={removeBtn}>삭제</button>
         </style.BtnBox>
       </style.BoxInner>
     </>

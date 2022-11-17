@@ -1,12 +1,17 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { removetodo } from "../../../../../../reducer/glenReducer";
 import Elist from "./editlist";
 import * as style from "./style";
 const Glist = ({ glen }) => {
   const [edit, setEdit] = useState(true);
+  const dispatch = useDispatch();
   const EditBtn = () => {
     setEdit(false);
   };
-
+  const removeBtn = () => {
+    dispatch(removetodo({ id: glen.id }));
+  };
   return (
     <>
       {edit ? (
@@ -22,11 +27,11 @@ const Glist = ({ glen }) => {
           <style.BtnBox key={glen.id}>
             <button onClick={EditBtn}>수정</button>
 
-            <button>삭제</button>
+            <button onClick={removeBtn}>삭제</button>
           </style.BtnBox>
         </style.BoxInner>
       ) : (
-        <Elist setEdit={setEdit} glen={glen} />
+        <Elist setEdit={setEdit} glen={glen} removeBtn={removeBtn} />
       )}
     </>
   );
