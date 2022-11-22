@@ -1,5 +1,5 @@
-import * as style from "../edit/style";
-const MyinfoDelete = () => {
+import * as style from "../useredit/style";
+const MyinfoDelete = ({ user }) => {
   return (
     <style.EditLine>
       <p>ID</p>

@@ -39,32 +39,32 @@ const ModalLogin = ({ setLoginModalOpen, signModal }) => {
   const navigator = useNavigate();
   const { me } = useSelector((state) => state.userReducer);
 
-  const loginHandler = useCallback(
-    (e) => {
-      // e.preventDefault();
-      dispatch({
-        type: LOGIN_R,
-        data: {
-          id: id,
-          pw: pw,
-        },
-      });
-      if (me) {
-        setLoginModalOpen(false);
-      } else {
-        setLoginModalOpen(true);
-      }
-    },
-    [id, pw]
-  );
+  // const loginHandler = useCallback(
+  //   (e) => {
+  //   //   // e.preventDefault();
+  //   //   dispatch({
+  //   //     type: LOGIN_R,
+  //   //     data: {
+  //   //       id: id,
+  //   //       pw: pw,
+  //   //     },
+  //   //   });
+  //   //   if (me) {
+  //   //     setLoginModalOpen(false);
+  //   //   } else {
+  //   //     setLoginModalOpen(true);
+  //   //   }
+  //   // },
+  //   // [id, pw]
+  // );
 
-  useEffect(() => {
-    if (!me) {
-      return;
-    }
-    navigator("/hide");
-    setLoginModalOpen(false);
-  }, [me]);
+  // useEffect(() => {
+  //   if (!me) {
+  //     return;
+  //   }
+  //   navigator("/hide");
+  //   setLoginModalOpen(false);
+  // }, [me]);
   return (
     <style.Form ref={ModalRef}>
       <style.FormInner>
@@ -87,7 +87,7 @@ const ModalLogin = ({ setLoginModalOpen, signModal }) => {
             required
           />
         </p>
-        <style.Btn onClick={loginHandler}>로그인</style.Btn>
+        <style.Btn>로그인</style.Btn>
         <style.CloseBtn onClick={closeModal}>
           <style.CloseImg src="img/glen/58007_close_icon.png" alt="" />
         </style.CloseBtn>

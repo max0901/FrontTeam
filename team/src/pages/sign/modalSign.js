@@ -1,8 +1,9 @@
 import * as style from "./style";
 import { useEffect, useRef, useState } from "react";
 import { useInput } from "../../hooks/useinput";
-import { useDispatch } from "react-redux";
-import { SIGN_R } from "../../reducer/userReducer";
+import { useDispatch, useSelector } from "react-redux";
+import { adduser } from "../../reducer/userReducer";
+
 const ModalSign = ({ setSignModalOpen }) => {
   //modal
   const closeModal = () => {
@@ -22,7 +23,8 @@ const ModalSign = ({ setSignModalOpen }) => {
   });
 
   //sign
-  const [id, changeId, setId] = useInput("");
+  const { user } = useSelector((state) => state.user);
+  const [email, changeEmail, setEmail] = useInput("");
   const [name, changeName, setName] = useInput("");
   const [pw, changePw, setPw] = useInput("");
   const [confirmPw, setConfirmPw] = useState("");
@@ -44,9 +46,13 @@ const ModalSign = ({ setSignModalOpen }) => {
     }
   };
   const onRegistHandler = (e) => {
-    console.log(pw);
-    console.log(confirmPw);
-    console.log(pwCheck);
+    let lastId;
+    console.log(user);
+    if (user.length > 0) {
+      lastId = user[0].id;
+    } else {
+      lastId = 0;
+    }
     if (pwCheck) {
       if (!alert("비밀번호가 일치하지 않습니다")) {
         setConfirmPw("");
@@ -54,15 +60,16 @@ const ModalSign = ({ setSignModalOpen }) => {
       return;
     } else {
       alert("회원가입완료");
+      setSignModalOpen(false);
     }
-    dispatch({
-      type: SIGN_R,
-      data: {
-        id: id,
+    dispatch(
+      adduser({
+        id: lastId + 1,
+        password: pw,
+        email: email,
         name: name,
-        pw: pw,
-      },
-    });
+      })
+    );
   };
   return (
     <style.Form ref={ModalRef}>
@@ -80,8 +87,8 @@ const ModalSign = ({ setSignModalOpen }) => {
           <input
             type="text"
             placeholder="아이디를 입력해주세요"
-            value={id}
-            onChange={changeId}
+            value={email}
+            onChange={changeEmail}
           />
         </p>
         <p>
@@ -89,7 +96,7 @@ const ModalSign = ({ setSignModalOpen }) => {
             type="password"
             placeholder="비밀번호를 입력해주세요"
             value={pw}
-            onChange={passwordLength}
+            onChange={changePw}
           />
         </p>
         {pwLength && changePw && (

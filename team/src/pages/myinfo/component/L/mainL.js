@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import MyinfoDelete from "../R/delet/infoDelet";
-import MyInfoEdit from "../R/edit/infoEdit";
+import MyinfoDelete from "../R/userdelet/infoDelet";
+import MyInfoEdit from "../R/useredit/infoEdit";
 import GlenList from "../R/glenlist/glenlist";
 import UserList from "../R/userlist/userlist";
 import * as style from "./style";
+import { useSelector } from "react-redux";
 const MyInfoMainL = () => {
   const [clickState, setClickstate] = useState(false);
   const [edit, setEdit] = useState(false);
@@ -34,7 +35,7 @@ const MyInfoMainL = () => {
     setList(false);
     setGlenList(true);
   };
-
+  const { user } = useSelector((state) => state.user);
   return (
     <>
       <style.MainLul>
@@ -60,13 +61,13 @@ const MyInfoMainL = () => {
         </style.MainLli>
       </style.MainLul>
       {clickState ? (
-        <MyinfoDelete />
+        <MyinfoDelete user={user} />
       ) : list ? (
-        <UserList />
+        <UserList user={user} />
       ) : glenlist ? (
         <GlenList />
       ) : (
-        <MyInfoEdit />
+        <MyInfoEdit user={user} />
       )}
     </>
   );

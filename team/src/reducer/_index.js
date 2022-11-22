@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
-import userReducer from "./userReducer";
+import { signUserReducer } from "./userReducer";
 import { glenReducer } from "./glenReducer";
 import { wineReducer } from "./wineReducer";
 const rootReducer = combineReducers({
-  userReducer,
   glen: glenReducer.reducer,
   wine: wineReducer.reducer,
+  user: signUserReducer.reducer,
 });
 
 export default rootReducer;

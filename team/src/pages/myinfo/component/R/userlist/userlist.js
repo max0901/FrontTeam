@@ -1,17 +1,13 @@
-import { useSelector } from "react-redux";
+import UList from "./component/ulist";
 
 import * as style from "./style";
-const UserList = () => {
+const UserList = ({ user }) => {
   return (
     <style.EditLine>
-      <>
-        <div></div>
-        <div></div>
-      </>
-
-      <style.EditBtn>
-        <button>수정 완료</button>
-      </style.EditBtn>
+      <h1>userlist</h1>
+      {user.map((v) => (
+        <UList key={v.id} user={v} />
+      ))}
     </style.EditLine>
   );
 };

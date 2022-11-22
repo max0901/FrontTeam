@@ -2,6 +2,7 @@ import * as Styled from "./style.js";
 import { useSelector } from "react-redux";
 const Main = () => {
   const { glen } = useSelector((state) => state.glen);
+  console.log(glen[2]);
   return (
     <Styled.Container>
       {glen.map((v) => (

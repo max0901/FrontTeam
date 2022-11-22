@@ -5,11 +5,7 @@ import { updatetodo } from "../../../../../../reducer/glenReducer";
 import * as style from "./style";
 const Elist = ({ glen, setEdit, removeBtn }) => {
   const dispatch = useDispatch();
-  // const inputTarget = useRef(null);
-  // useEffect(() => {
-  //   inputTarget.current.style.width =
-  //     inputTarget.current.value.length * 100 + "px";
-  // });
+
   const [h1, changeh1, setH1] = useInput(glen.h1);
   const [h4, changeh4, setH4] = useInput(glen.h4);
   const [h1_1, changeh1_1, setH1_1] = useInput(glen.h1_1);

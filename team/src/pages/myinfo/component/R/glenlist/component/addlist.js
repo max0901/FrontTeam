@@ -12,6 +12,7 @@ const Addlist = ({ glen, setAddLIst }) => {
   const [img, changeImg, setImg] = useInput("");
   const dispatch = useDispatch();
   const addBtn = () => {
+    console.log(glen);
     let lastId;
     if (glen.length > 0) {
       lastId = glen[0].id;

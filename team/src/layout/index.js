@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
     setSignModalOpen(true);
   };
   const navigator = useNavigate();
-  const { me } = useSelector((state) => state.userReducer);
+
   // useEffect(() => {
   //   console.log(dummyUser);
   // });
