@@ -1,4 +1,13 @@
 import styled from "styled-components";
+export const ListDiv = styled.div`
+  width: 1200px;
+  overflow: hidden;
+`;
+export const ListUl = styled.ul`
+  display: flex;
+  width: 2000px;
+  overflow: hidden;
+`;
 export const prod = styled.li`
   /* background-color: grey; */
   border: 1px solid #ddd;
@@ -25,9 +34,9 @@ export const divHidden = styled.div`
 
   transition: all 1s ease;
   position: relative;
-  top: -610px;
+  top: -638px;
   width: 240px;
-  height: 525px;
+  height: 550px;
   &:hover {
     opacity: 0.5;
   }
@@ -48,7 +57,7 @@ export const left = styled.div`
   float: left;
   position: absolute;
   top: 65%;
-  left: -20%;
+  left: 10%;
   opacity: 0;
   transition: all 1s ease;
   z-index: 5;
@@ -58,7 +67,7 @@ export const right = styled.div`
   float: right;
   position: absolute;
   top: 65%;
-  right: -20%;
+  right: 10%;
   opacity: 0;
   transition: all 1s ease;
   z-index: 5;

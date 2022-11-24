@@ -1,4 +1,8 @@
 import styled from "styled-components";
+export const ListDiv = styled.div`
+  width: 1200px;
+  overflow: hidden;
+`;
 export const prod = styled.li`
   /* background-color: grey; */
   border: 1px solid #ddd;
@@ -10,6 +14,11 @@ export const prod = styled.li`
   & dl {
     line-height: 30px;
   }
+`;
+export const ListUl = styled.ul`
+  display: flex;
+  width: 2000px;
+  overflow: hidden;
 `;
 export const Dt = styled.dt`
   font-family: "Playfair Display SC", serif;
@@ -48,7 +57,7 @@ export const left = styled.div`
   float: left;
   position: absolute;
   top: 200%;
-  left: -20%;
+  left: 10%;
   opacity: 1;
   transition: all 1s ease;
   z-index: 5;
@@ -58,7 +67,7 @@ export const right = styled.div`
   float: right;
   position: absolute;
   top: 200%;
-  right: -20%;
+  right: 10%;
   opacity: 1;
   transition: all 1s ease;
   z-index: 5;

@@ -3,15 +3,6 @@ import styled from "styled-components";
 export const product = styled.div`
   width: 1200px;
   margin: 50px auto;
-  & div {
-    width: 1200px;
-    overflow: hidden;
-  }
-  & ul {
-    display: flex;
-    width: 2000px;
-    overflow: hidden;
-  }
 `;
 export const TItle = styled.div`
   border-bottom: 1px solid black;

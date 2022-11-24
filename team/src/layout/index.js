@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
     setSignModalOpen(true);
   };
   const navigator = useNavigate();
-
+  const { user } = useSelector((state) => state.user);
   // useEffect(() => {
   //   console.log(dummyUser);
   // });
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
         <Style.Title>
           <Link to="/">제목</Link>
         </Style.Title>
-        {/* {me ? ( */}
+        {/* {user.info ? ( */}
         <Style.Sign>
           <Style.LinkTo to="/myinfo">마이페이지</Style.LinkTo>
           <Style.LinkTo to="/">로그아웃</Style.LinkTo>

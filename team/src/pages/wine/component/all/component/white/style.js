@@ -18,6 +18,15 @@ export const Dt = styled.dt`
 export const DD = styled.dt`
   color: #93122d;
 `;
+export const ListDiv = styled.div`
+  width: 1200px;
+  overflow: hidden;
+`;
+export const ListUl = styled.ul`
+  display: flex;
+  width: 2000px;
+  overflow: hidden;
+`;
 export const divHidden = styled.div`
   color: white;
   background-color: black;
@@ -48,7 +57,7 @@ export const left = styled.div`
   float: left;
   position: absolute;
   top: 130%;
-  left: -20%;
+  left: 10%;
   opacity: 1;
   transition: all 1s ease;
   z-index: 5;
@@ -58,7 +67,7 @@ export const right = styled.div`
   float: right;
   position: absolute;
   top: 130%;
-  right: -20%;
+  right: 10%;
   opacity: 1;
   transition: all 1s ease;
   z-index: 5;

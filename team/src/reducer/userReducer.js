@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  user: [{ id: 1, email: "admin", password: 1234, name: "max" }],
+  user: [{ id: 1, email: "admin", password: 1234, name: "max", info: false }],
 };
 
 export const signUserReducer = createSlice({
@@ -21,4 +21,16 @@ export const signUserReducer = createSlice({
   },
 });
 
+export const loginUserReducer = createSlice({
+  name: "login",
+  initialState,
+  reducers: {
+    Login: (state, action) => {},
+    Logout: (state, action) => {
+      state.glen = state.glen.filter((item) => item.id !== action.payload.id);
+    },
+  },
+});
+
 export const { adduser, removeuser, edituser } = signUserReducer.actions;
+export const { Login, Logout } = loginUserReducer.actions;

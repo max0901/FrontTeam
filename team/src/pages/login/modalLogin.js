@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useInput } from "../../hooks/useinput";
-import { LOGIN_R } from "../../reducer/userReducer";
+import { Login, LOGIN_R } from "../../reducer/userReducer";
 import * as style from "./style";
 import { motion } from "framer-motion";
 const ModalLogin = ({ setLoginModalOpen, signModal }) => {
@@ -37,7 +37,6 @@ const ModalLogin = ({ setLoginModalOpen, signModal }) => {
   const [pw, changePw, setPw] = useInput("");
   const dispatch = useDispatch();
   const navigator = useNavigate();
-  const { me } = useSelector((state) => state.userReducer);
 
   // const loginHandler = useCallback(
   //   (e) => {
@@ -57,7 +56,13 @@ const ModalLogin = ({ setLoginModalOpen, signModal }) => {
   //   // },
   //   // [id, pw]
   // );
-
+  const { user } = useSelector((state) => state.user);
+  const LoginHandler = () => {
+    dispatch(Login({ email: id, password: pw, info: true }));
+    setLoginModalOpen(false);
+    alert("로그인성공");
+    navigator("/hide");
+  };
   // useEffect(() => {
   //   if (!me) {
   //     return;
@@ -87,7 +92,7 @@ const ModalLogin = ({ setLoginModalOpen, signModal }) => {
             required
           />
         </p>
-        <style.Btn>로그인</style.Btn>
+        <style.Btn onClick={LoginHandler}>로그인</style.Btn>
         <style.CloseBtn onClick={closeModal}>
           <style.CloseImg src="img/glen/58007_close_icon.png" alt="" />
         </style.CloseBtn>
