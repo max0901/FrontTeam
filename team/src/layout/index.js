@@ -55,16 +55,16 @@ const Layout = ({ children }) => {
         {/* )} */}
         <Style.Menu>
           <li>
-            <Link to="/glen">글랜</Link>
+            <Link to="/glen">GLEN</Link>
           </li>
           <li>
-            <Link to="/hand">핸드</Link>
+            <Link to="/hand">HAND</Link>
           </li>
           <li>
-            <Link to="/wine">와인</Link>
+            <Link to="/wine">WINE</Link>
           </li>
           <li>
-            <Link to="">메뉴4</Link>
+            <Link to="/map">FIND</Link>
           </li>
         </Style.Menu>
       </Style.Header>
