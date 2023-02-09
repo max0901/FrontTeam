@@ -18,6 +18,6 @@ export const Title = styled.div`
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 4px;
-    margin-left: 20px;font
+    margin-left: 20px;
   }
 `;
