@@ -21,3 +21,10 @@ export const Title = styled.div`
     margin-left: 20px;
   }
 `;
+export const TextDiv = styled.div`
+  margin-top: 40px;
+  & p span {
+    font-weight: 700;
+    margin-right: 10px;
+  }
+`;

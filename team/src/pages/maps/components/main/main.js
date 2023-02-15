@@ -88,7 +88,20 @@ const Main = () => {
           id="maps"
         ></Styled.MapContainer>
       </Styled.MapWapper>
-      <div></div>
+      <Styled.TextDiv>
+        <h2>찾아오시는 길</h2>
+        <p>
+          <span>⊙전철:</span>가락시장역 사거리 - 3호선 양재역 2번 출구
+        </p>
+        <p>
+          <span>⊙주소:</span>서울시 서초구 서초동 1360-14번지 | 낫소빌딩 2층
+          <br />
+          <span>한국결혼지능연구소</span>
+        </p>
+        <p>
+          <span>⊙연락처: Tel. 02-587-8824 | Fax. 02-3472-9349</span>
+        </p>
+      </Styled.TextDiv>
     </div>
   );
 };

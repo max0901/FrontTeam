@@ -40,7 +40,11 @@ const WhiteList = () => {
   const visibleRef = useRef(null);
   return (
     <styled.ListDiv>
-      <styled.ListUl ref={slider}>
+      <styled.ListUl
+        ref={slider}
+        onMouseOver={mouseover}
+        onMouseLeave={mouseleave}
+      >
         {white.map((v) => (
           <styled.prod ref={visibleRef} key={v.id}>
             <img src={v.img} alt="" />

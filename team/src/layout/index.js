@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         exit={{ opacity: 0 }}
       >
         <Style.Title>
-          <Link to="/">제목</Link>
+          <Link to="/">LIQUOR</Link>
         </Style.Title>
         {/* {user.info ? ( */}
         <Style.Sign>

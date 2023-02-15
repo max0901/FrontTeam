@@ -12,7 +12,10 @@ export const prod = styled.li`
   overflow: hidden;
   height: 525px;
   & dl {
+    height: 60px;
     line-height: 30px;
+    white-space: pre-wrap;
+    word-break: break-all;
   }
 `;
 export const ListUl = styled.ul`
@@ -23,9 +26,11 @@ export const ListUl = styled.ul`
 export const Dt = styled.dt`
   font-family: "Playfair Display SC", serif;
   font-weight: bold;
+  font-size: 15px;
 `;
 export const DD = styled.dt`
   color: #93122d;
+  font-size: 15px;
 `;
 export const divHidden = styled.div`
   color: white;
