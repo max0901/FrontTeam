@@ -38,12 +38,12 @@ const Layout = ({ children }) => {
         <Style.Title>
           <Link to="/">LIQUOR</Link>
         </Style.Title>
-        {/* {user.info ? ( */}
+
         <Style.Sign>
           <Style.LinkTo to="/myinfo">마이페이지</Style.LinkTo>
           <Style.LinkTo to="/">로그아웃</Style.LinkTo>
         </Style.Sign>
-        {/* ) : ( */}
+
         <Style.Sign>
           <Style.LinkTo to="" onClick={loginModal}>
             로그인
@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
             회원가입
           </Style.LinkTo>
         </Style.Sign>
-        {/* )} */}
+
         <Style.Menu>
           <li>
             <Link to="/glen">GLEN</Link>

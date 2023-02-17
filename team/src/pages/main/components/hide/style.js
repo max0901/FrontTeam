@@ -103,7 +103,7 @@ export const Box = styled.div`
   }
 `;
 export const Box1 = styled.div`
-  background-color: #47b267;
+  /* background-color: #47b267; */
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -145,6 +145,12 @@ export const Img2 = styled.img`
 export const Img3 = styled.img`
   width: 200px;
   height: 200px;
+  border-radius: 50%;
+  transition: all 1s ease;
+`;
+export const Img4 = styled.img`
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   transition: all 1s ease;
 `;

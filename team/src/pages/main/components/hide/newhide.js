@@ -32,6 +32,14 @@ const NewHide = () => {
     targetImg3.current.style.width = "200px";
     targetImg3.current.style.height = "200px";
   };
+  const overBig4 = () => {
+    targetImg3.current.style.width = "200px";
+    targetImg3.current.style.height = "200px";
+  };
+  const leaveSmall4 = () => {
+    targetImg3.current.style.width = "100px";
+    targetImg3.current.style.height = "100px";
+  };
   return (
     <Layout
       as={motion.div}
@@ -73,7 +81,17 @@ const NewHide = () => {
             />
           </Link>
         </Styled.Box>
-        <Styled.Box1></Styled.Box1>
+        <Styled.Box1>
+          <Link to="/map">
+            <Styled.Img4
+              src="img/다운로드.png"
+              alt=""
+              ref={targetImg3}
+              onMouseOver={overBig4}
+              onMouseLeave={leaveSmall4}
+            />
+          </Link>
+        </Styled.Box1>
         <Styled.TextBox>
           <h2>LIQUOR</h2>
           <p>Click directly on the brand you are interested in</p>
